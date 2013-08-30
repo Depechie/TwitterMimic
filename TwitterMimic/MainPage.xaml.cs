@@ -15,15 +15,5 @@ namespace TwitterMimic
         {
             InitializeComponent();            
         }
-
-        private void ImageBar_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
-            this.ContentPivot.SelectedIndex = this.ImageBar.SelectedIndex;
-        }
-
-        private void ContentPivot_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
-            this.ImageBar.SelectedIndex = ((Pivot)sender).SelectedIndex;
-        }
     }
 }
