@@ -79,7 +79,7 @@
                      Grid.Row="0"
                      ScrollViewer.VerticalScrollBarVisibility="Disabled"
                      ItemContainerStyle="{StaticResource ListBoxItemStyle}"                     
-                     SelectionChanged="ImageBar_SelectionChanged">
+                     SelectedIndex="{Binding SelectedIndex, ElementName=ContentPivot, Mode=TwoWay}">
                 <ListBox.ItemsPanel>
                     <ItemsPanelTemplate>
                         <customcontrols:SplitPanel />
@@ -101,9 +101,7 @@
 
             <controls:Pivot x:Name="ContentPivot"
                             Grid.Row="1"
-                            Margin="0,-12,0,0"
-                            SelectionChanged="ContentPivot_SelectionChanged"                            
-                            >
+                            Margin="0,-12,0,0">
                 <controls:PivotItem>
                     <StackPanel>
                         <TextBlock Text="RAIN" Style="{StaticResource PhoneTextTitle2Style}" FontWeight="Bold"/>
